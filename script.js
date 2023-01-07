@@ -7,15 +7,27 @@ let arr = [
 ];
 
 function PrintDeveloperswithMap() {
-  //Write your code here
+  arr.map(DeveloperMap);
+  function DeveloperMap(array){
+    if(array.profession==="developer"){
+      console.log(array);
+    }
+  }
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here
+  arr.map(DeveloperEach);
+  function DeveloperEach(array){
+    if(array.profession==="developer"){
+      console.log(array);
+    }
+  }
 }
 
 function addData() {
-  //Write your code here
+  let NewOne={id:4,name:"susan",age:"20",profession:"intern"};
+  arr.push(NewOne);
+  console.log(arr);
 }
 
 function removeAdmin() {
@@ -23,5 +35,11 @@ function removeAdmin() {
 }
 
 function concatenateArray() {
-  //Write your code here
+  let Newarr = [
+    { id: 5, name: "peter", age: "54", profession: "supermain" },
+    { id: 6, name: "quakmayer", age: "52", profession: "producter" },
+    { id: 7, name: "meg", age: "19", profession: "headofdep" },
+  ];
+  let makeOne=arr.concat(Newarr);
+  console.log(makeOne);
 }
